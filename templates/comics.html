@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="container">
+<div class="section">
+  <h1>comics</h1>
+  <p>Comics are drawn picture books</p>
+  <p><a href="/index">Go back to the home page</a></p>
+  <div class="tile is-ancestor">
+    <div class="tile">
+      <div class="tile is-parent">
+        <article class="tile is-child notification is-info">
+          <p class="title">Watchmen</p>
+          <figure class="image is-4by3">
+            <a href="/Watchmen">
+              <img src="https://images.gr-assets.com/books/1442239711l/472331.jpg">
+            </a>
+          </figure>
+        </article>
+      </div>
+      <div class="tile is-parent">
+        <article class="tile is-child notification is-info">
+          <p class="title">Saga</p>
+          <figure class="image is-4by3">
+            <a href="/Saga">
+              <img src="https://images.gr-assets.com/books/1486028947l/15704307.jpg">
+            </a>
+          </figure>
+        </article>
+      </div>
+      <div class="tile is-parent">
+        <article class="tile is-child notification is-info">
+          <p class="title">Batman</p>
+          <figure class="image is-4by3">
+            <a href="/Batman">
+              <img src="https://images.gr-assets.com/books/1346331835l/96358.jpg">
+            </a>
+          </figure>
+        </article>
+      </div>
+</div>
+</div>
+</div>
+{% endblock %}
