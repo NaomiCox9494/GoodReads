@@ -1,0 +1,26 @@
+{% macro show_manga(Manga) %}
+<div class="card adjust-height">
+  <p>hello</p>
+  <header class="card-header">
+    <p class="card-header-title">
+      {{ Manga['mang_title'] }}
+    </p>
+  </header>
+  <div class="card-content">
+    <div class="content">
+      <p> hello {{ Manga['mang_author'] }}</p><br>
+      <p>{{ Manga['mang_descript'] }}</p><br>
+    </div>
+  </div>
+</div>
+{% endmacro %}
+
+{% macro show_mangas(Manga) %}
+<div class="columns is-multiline">
+  {% for ma in Manga %}
+  <div class="column is-half">
+    {{ show_manga(Manga) }}
+  </div>
+  {% endfor %}
+</div>
+{% endmacro %}
