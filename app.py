@@ -32,15 +32,13 @@ def close_connection(exeption):
 
 @app.route('/')
 @app.route('/books')
-
-@app.route('/index')
 def index():
     return render_template('index.html')
 
 @app.route('/Manga')
-def manga():
-    Manga = execute_sql('SELECT * FROM Manga')
-    return render_template('manga.html', Manga=manga)
+def mangas():
+    mangas = execute_sql('SELECT * FROM mangas')
+    return render_template('manga.html', mangas=mangas)
 
 @app.route('/comics')
 def comics():
@@ -48,11 +46,9 @@ def comics():
     return render_template('comics.html', comics=comics)
 
 @app.route('/SciFi')
-def SciFi():
-    SciFi = execute_sql('SELECT * FROM SciFi')
-    return render_template('SciFi.html', sciFi=SciFi)
+def sciences():
+    sciences = execute_sql('SELECT * FROM sciences')
+    return render_template('SciFi.html', sciences=sciences)
 
-
-# start the server with the 'run()' method
 if __name__ == '__main__':
     app.run(debug=True)

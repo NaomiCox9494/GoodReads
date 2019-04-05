@@ -1,25 +1,42 @@
-{% macro show_manga(Manga) %}
+{% macro show_comic(comics) %}
 <div class="card adjust-height">
-  <p>hello</p>
-  <header class="card-header">
-    <p class="card-header-title">
-      {{ Manga['mang_title'] }}
-    </p>
-  </header>
   <div class="card-content">
     <div class="content">
-      <p> hello {{ Manga['mang_author'] }}</p><br>
-      <p>{{ Manga['mang_descript'] }}</p><br>
+      <h2>{{ comics['comics_title'] }}</h2>
+      <h4>{{ comics['comics_author'] }}</h4>
+      <p>{{ comics['comics_descript'] }}</p><br>
     </div>
   </div>
 </div>
 {% endmacro %}
 
-{% macro show_mangas(Manga) %}
-<div class="columns is-multiline">
-  {% for ma in Manga %}
-  <div class="column is-half">
-    {{ show_manga(Manga) }}
+{% macro show_comics(comics) %}
+<div>
+  {% for comic in comics %}
+  <div>
+    {{ show_comic(comic) }}
+  </div>
+  {% endfor %}
+</div>
+{% endmacro %}
+
+{% macro show_science(sciences) %}
+<div class="card adjust-height">
+  <div class="card-content">
+    <div class="content">
+      <h2>{{ sciences['scifi_title'] }}</h2>
+      <h4>{{ sciences['scifi_author'] }}</h4>
+      <p>{{ sciences['scifi_descript'] }}</p><br>
+    </div>
+  </div>
+</div>
+{% endmacro %}
+
+{% macro show_sciences(sciences) %}
+<div>
+  {% for science in sciences %}
+  <div>
+    {{ show_science(science) }}
   </div>
   {% endfor %}
 </div>
